@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net48;net8.0</TargetFrameworks>
+    <TargetFramework>net48</TargetFramework>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <RootNamespace>Bookstore.Domain</RootNamespace>
     <AssemblyName>Bookstore.Domain</AssemblyName>
@@ -11,30 +11,21 @@
     <Version>1.0.0</Version>
     <Authors>Bob's Used Bookstore</Authors>
     <Company>Bob's Used Bookstore</Company>
-    <Description>Domain layer for Bob's Used Bookstore application</Description>
-    <PackageTags>bookstore;domain</PackageTags>
+    <Description>Domain layer for Bob's Used Bookstore application (.NET Framework 4.8)</Description>
+    <PackageTags>bookstore;domain;netframework</PackageTags>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-  </PropertyGroup>
-
-  <!-- .NET Framework specific settings -->
-  <PropertyGroup Condition="'$(TargetFramework)' == 'net48'">
     <DefineConstants>NETFRAMEWORK</DefineConstants>
+    <PackageOutputPath>..\..\nuget-packages</PackageOutputPath>
+    
+    <!-- Include all content files -->
+    <EnableDefaultItems>true</EnableDefaultItems>
+    <EnableDefaultCompileItems>true</EnableDefaultCompileItems>
   </PropertyGroup>
-
-  <!-- .NET 8 specific settings -->
-  <PropertyGroup Condition="'$(TargetFramework)' == 'net8.0'">
-    <DefineConstants>NETCORE</DefineConstants>
-  </PropertyGroup>
-
-  <!-- Common references for both frameworks -->
-  <ItemGroup>
-    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
-  </ItemGroup>
 
   <!-- .NET Framework specific references -->
-  <ItemGroup Condition="'$(TargetFramework)' == 'net48'">
+  <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -44,6 +35,16 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Xml" />
+  </ItemGroup>
+
+  <!-- Common references -->
+  <ItemGroup>
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+  </ItemGroup>
+
+  <!-- Include all files in the project -->
+  <ItemGroup>
+    <Compile Include="..\**\*.cs" Exclude="obj\**\*.cs;bin\**\*.cs" />
   </ItemGroup>
 
 </Project>

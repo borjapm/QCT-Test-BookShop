@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <RootNamespace>Bookstore.Domain</RootNamespace>
+    <AssemblyName>Bookstore.Domain</AssemblyName>
+    
+    <!-- NuGet Package Properties -->
+    <PackageId>Bookstore.Domain</PackageId>
+    <Version>8.0.0</Version>
+    <Authors>Bob's Used Bookstore</Authors>
+    <Company>Bob's Used Bookstore</Company>
+    <Description>Domain layer for Bob's Used Bookstore application (.NET 8)</Description>
+    <PackageTags>bookstore;domain;net8</PackageTags>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <DefineConstants>NETCORE</DefineConstants>
+    <PackageOutputPath>..\..\nuget-packages</PackageOutputPath>
+  </PropertyGroup>
+
+  <!-- Common references -->
+  <ItemGroup>
+    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+  </ItemGroup>
+
+</Project>

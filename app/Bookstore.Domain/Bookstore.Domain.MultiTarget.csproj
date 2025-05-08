@@ -8,14 +8,15 @@
     
     <!-- NuGet Package Properties -->
     <PackageId>Bookstore.Domain</PackageId>
-    <Version>1.0.0</Version>
+    <Version>8.1.0</Version>
     <Authors>Bob's Used Bookstore</Authors>
     <Company>Bob's Used Bookstore</Company>
-    <Description>Domain layer for Bob's Used Bookstore application</Description>
-    <PackageTags>bookstore;domain</PackageTags>
+    <Description>Domain layer for Bob's Used Bookstore application (Multi-targeted: .NET Framework 4.8 and .NET 8)</Description>
+    <PackageTags>bookstore;domain;netframework;net8</PackageTags>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PackageOutputPath>..\..\nuget-packages</PackageOutputPath>
   </PropertyGroup>
 
   <!-- .NET Framework specific settings -->
