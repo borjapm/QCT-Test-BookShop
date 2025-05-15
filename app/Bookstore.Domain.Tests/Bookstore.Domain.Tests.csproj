@@ -37,9 +37,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Bookstore.Domain, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Bookstore.Domain.1.0.0\lib\net48\Bookstore.Domain.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.TestPlatform.CoreUtilities, Version=15.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.TestPlatform.ObjectModel.17.13.0\lib\net462\Microsoft.TestPlatform.CoreUtilities.dll</HintPath>
     </Reference>
@@ -98,6 +95,10 @@
     <Analyzer Include="..\..\packages\xunit.analyzers.1.18.0\analyzers\dotnet\cs\xunit.analyzers.fixes.dll" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Bookstore.Domain\Bookstore.Domain.csproj">
+      <Project>{eceeb3cb-16c9-4358-a250-65837fe71243}</Project>
+      <Name>Bookstore.Domain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Bookstore.Web\Bookstore.Web.csproj">
       <Project>{40E4E3FC-93F0-4CF2-A506-31546F7606C4}</Project>
       <Name>Bookstore.Web</Name>
